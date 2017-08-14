@@ -1,8 +1,8 @@
 # Java-Data-Structure-And-Arithmetic
-Java数据结构与算法 /n
+Java数据结构与算法 
 一、数据结构包括
-1、队列
-2、优先级队列
+*、队列
+*、优先级队列
 3、栈
 4、单链表
 5、双端链表
