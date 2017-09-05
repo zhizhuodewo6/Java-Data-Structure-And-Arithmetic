@@ -3,7 +3,7 @@ package com.tool.wpn.quicksort;
 import android.util.Log;
 
 /**
- * Created by XiJie on 2017/8/13.
+ * Created by Xi on 2017/8/13.
  * 快速排序
  */
 
@@ -51,50 +51,47 @@ public class ArrayQuick {
 
     /**
      * 用递归和划分技术进行快速排序
+     * 参数为数组中的下标
      */
     public void recQuickSort(int left,int right){
         int size=right-left+1;
-
         if(size<=10){//如果需排序的数量小于10，则使用插入排序，提高效率
             insertionSort(left,right);
         }else{
-            long pivot=medianOf3(left,right);//取分隔点值
-            int partition=partitionIt(left,right,pivot);
-            recQuickSort(left,partition-1);//递归 前一部分再划分
-            recQuickSort(partition+1,right);//递归 后一部分再划分
+            medianOf3(left,right);//取分隔点值,将最左边坐标的数设为为分割值
+            if(left<right){
+                int i=left,j=right;//i,j分别为左右移动标志
+                long temp=theArray[i];//分割值，咱存起来，因为要用他所在下标空间作为空间用于小大俩数的交换
+                while(i<j){
+                    //从右向左找小于基准值theArray[i]的元素
+                    while(i<j&&theArray[j]>temp)
+                        j--;
+                    if(i<j)
+                        theArray[i++]=theArray[j];//找到小于基准数的元素，将其放到数组中的空位置，第一次为基准数的位置
+                    //从左向右找大于基准值theArray[i]d的元素
+                    while(i<j&&theArray[i]<temp)
+                        i++;
+                    if(i<j)
+                        theArray[j--]=theArray[i];//找到大于基准数的元素
+                }
+                //将基准数填入最后的坑中
+                theArray[i]=temp;
+                //递归调用，分治法的思想
+                recQuickSort(left,i-1);
+                recQuickSort(i+1,right);
+            }
         }
     }
 
     /**
-     * 三项数据取中，并将中间的数放到数组最右侧用于后面的比较基数
+     * 三项数据取中，并将中间的数放到数组最左侧用于后面的比较基数
+     * 参数为数组中的下标
      */
-    private long medianOf3(int left,int right){//三项数组取中
-        int center=(left+right)/2;
-        if(theArray[left]>theArray[center])swap(left,center);
-        if(theArray[left]>theArray[right])swap(left,right);
+    public void medianOf3(int left,int right){//三项数组取中
+        int center=(left+right+1)/2;
+        if(theArray[center]>theArray[left])swap(center,left);
         if(theArray[center]>theArray[right])swap(center,right);
-        swap(center,right-1);
-        return theArray[right-1];
-    }
-
-    /**
-     * 按照pivot比较基数，开始从左到右，与从右到左开始对数据进行比较交换
-     * @param left
-     * @param right
-     * @param pivot
-     * @return
-     */
-    private int partitionIt(int left,int right,long pivot){
-        int leftPtr=left;
-        int rightPtr=right-1;
-        while(true){
-            while(theArray[++leftPtr]<pivot);//从左侧找大于基数的数
-            while(theArray[--rightPtr]>pivot);//从右侧找小于基数的数
-            if(leftPtr>=rightPtr)break;//未找到，退出
-            else swap(leftPtr,rightPtr);//以找到，左右交换
-        }
-        swap(leftPtr,right-1);//将比较基数放到中间位置
-        return  leftPtr;
+        if(theArray[left]>theArray[right])swap(left,right);
     }
 
     /**

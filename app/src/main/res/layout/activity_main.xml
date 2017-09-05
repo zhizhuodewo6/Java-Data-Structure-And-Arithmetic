@@ -9,12 +9,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_array_general"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="数据结构-无序数组"
+            />
+
+        <Button
+            android:id="@+id/btn_array_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="数据结构-有序数组"
+            />
 
         <Button
             android:id="@+id/btn_orderarry_binarysearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="有序数组二分查找"
+            android:text="查找-有序数组二分查找"
             />
         <Button
             android:id="@+id/btn_simple_sort_bubble"
@@ -38,86 +51,86 @@
             android:id="@+id/btn_queue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="队列"
+            android:text="数据结构-队列"
             />
 
         <Button
             android:id="@+id/btn_queue_prior"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="优先级队列"
+            android:text="数据结构-优先级队列"
             />
 
         <Button
             android:id="@+id/btn_stack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="栈"
+            android:text="数据结构-栈"
             />
 
         <Button
             android:id="@+id/btn_link_single"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="单链表"
+            android:text="数据结构-单链表"
             />
 
         <Button
             android:id="@+id/btn_link_firtlast"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="双端链表"
+            android:text="数据结构-双端链表"
             />
 
         <Button
             android:id="@+id/btn_link_stack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="用单链表实现栈"
+            android:text="用例-用单链表实现栈"
             />
 
         <Button
             android:id="@+id/btn_link_queue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="用双端链表实现队列"
+            android:text="用例-用双端链表实现队列"
             />
 
         <Button
             android:id="@+id/btn_link_orderly"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="有序链表"
+            android:text="数据结构-有序链表"
             />
         <Button
             android:id="@+id/btn_link_double"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="双向链表"
+            android:text="数据结构-双向链表"
             />
         <Button
             android:id="@+id/btn_find_recursion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="递归二分查找"
+            android:text="查找-递归二分查找"
             />
         <Button
             android:id="@+id/btn_tower_recursion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="递归解决汉诺塔问题"
+            android:text="用例-递归解决汉诺塔问题"
             />
         <Button
             android:id="@+id/btn_sort_merge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="归并排序"
+            android:text="高级排序-归并排序"
             />
         <Button
             android:id="@+id/btn_sort_shell"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="希尔排序"
+            android:text="高级排序-希尔排序"
             />
         <Button
             android:id="@+id/btn_sort_quick"
@@ -129,7 +142,7 @@
             android:id="@+id/btn_sort_radix"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="基数排序"
+            android:text="高级排序-基数排序"
             />
         <ImageView
             android:id="@+id/iv_radix"
@@ -137,5 +150,47 @@
             android:layout_height="wrap_content"
             android:src="@drawable/radix"
             android:visibility="gone"/>
+        <Button
+            android:id="@+id/btn_tree_binary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="数据结构-二叉树"
+            />
+        <Button
+            android:id="@+id/btn_hash_lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="数据结构--线性探测法哈希表"
+            />
+        <Button
+            android:id="@+id/btn_hash_again"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="数据结构--再哈希法哈希表"
+            />
+        <Button
+            android:id="@+id/btn_hash_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="数据结构-链地址法哈希表"
+            />
+        <Button
+            android:id="@+id/btn_heap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="数据结构-堆"
+            />
+        <Button
+            android:id="@+id/btn_graph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="数据结构-图简介、图搜索、图最小生成树"
+            />
+        <Button
+            android:id="@+id/btn_graph_topo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="用例-有向图的拓扑排序"
+            />
     </LinearLayout>
 </ScrollView>

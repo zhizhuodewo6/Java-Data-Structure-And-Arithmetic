@@ -3,7 +3,7 @@ package com.tool.wpn.quicksort;
 import android.util.Log;
 
 /**
- * Created by XiJie on 2017/8/1.
+ * Created by Xi on 2017/8/1.
  * 双向链表
  */
 

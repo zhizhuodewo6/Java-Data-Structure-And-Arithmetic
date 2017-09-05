@@ -2,10 +2,8 @@ package com.tool.wpn.quicksort;
 
 import android.util.Log;
 
-import java.util.Arrays;
-
 /**
- * Created by XiJie on 2017/8/12.
+ * Created by Xi on 2017/8/12.
  * 递归二分查找
  */
 
@@ -73,6 +71,17 @@ public class ArrayOrderRecursion {
      * 展示有序数组
      */
     public void display(){
-        Log.i("ArrayOrderRecursion","orderArray值为："+ Arrays.toString(orderArray));
+        StringBuilder sb=new StringBuilder();
+        sb.append("[");
+        for(int i=0;i<nElems;i++){
+            if(i==nElems-1)
+                sb.append(orderArray[i]);
+            else {
+                sb.append(orderArray[i]);
+                sb.append(",");
+            }
+        }
+        sb.append("]");
+        Log.v("ArrayOrderRecursion",sb.toString());
     }
 }
