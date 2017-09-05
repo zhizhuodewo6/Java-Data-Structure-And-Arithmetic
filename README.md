@@ -1,13 +1,9 @@
 # Java-Data-Structure-And-Arithmetic
 Java数据结构与算法</br>
 ====
-一、概括与总结</br>
+一、数据结构</br>
 -------
-连接文章地址：http://blog.csdn.net/zhizhuodewo6/article/details/75254795
-
-二、数据结构</br>
--------
-1、无序数组</br>
+1、[无序数组](http://blog.csdn.net/zhizhuodewo6/article/details/75258226)</br>
 2、有序数组</br>
 3、单链表</br>
 4、双端链表</br>
@@ -23,7 +19,7 @@ Java数据结构与算法</br>
 14、优先级队列</br>
 15、图</br>
 
-三、排序算法</br>
+二、排序算法</br>
 -------
 1、简单排序-冒泡排序</br>
 2、简单排序-选择排序</br>
@@ -34,7 +30,7 @@ Java数据结构与算法</br>
 7、高级排序-基数排序</br>
 8、高级排序-堆排序</br>
 
-四、其他扩展</br>
+三、其他扩展</br>
 -------
 1、有序数组二分查找</br>
 2、用单链表实现栈</br>
